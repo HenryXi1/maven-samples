@@ -7,5 +7,23 @@ pipeline {
       }
     }
 
+    stage('run test') {
+      steps {
+        sh 'mvn verify'
+      }
+    }
+
+    stage('run verify') {
+      steps {
+        sh 'mvn verify'
+      }
+    }
+
+    stage('run clean') {
+      steps {
+        sh 'mvn clean'
+      }
+    }
+
   }
 }
