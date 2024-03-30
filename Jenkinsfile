@@ -7,25 +7,13 @@ pipeline {
   stages {
     stage('check out') {
       steps {
-        git(url: 'https://github.com/HenryXi1/maven-samples.git', branch: 'master')
+        git(url: 'https://github.com/dhetong/maven-samples-A6.git', branch: 'master')
       }
     }
 
-    stage('run test') {
-      steps {
-        sh 'mvn test'
-      }
-    }
-
-    stage('run verify') {
+    stage('run') {
       steps {
         sh 'mvn verify'
-      }
-    }
-
-    stage('run clean') {
-      steps {
-        sh 'mvn clean'
       }
     }
 
